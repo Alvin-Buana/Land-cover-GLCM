@@ -1,7 +1,9 @@
-from preprocessing.datasetHandler import xml_handler
+from preprocessing.datasetHandler import sent2_handler
+from utils.glcm import extract_raster,glcm
 from model.svm import modelSVC
 
-# import numpy as np
+import numpy as np
+import rasterio
 import logging 
 import os
 
@@ -24,4 +26,9 @@ if __name__ == '__main__':
     
     
     logging.info('Program starting...')
-    xml_handler()
+    sent2_handler()
+    tester = '.\data\hutan (Sent-2)\images\\000000000.tif'
+    tester = extract_raster(tester)
+    res=glcm(tester,1)
+    # print(contrast)
+    

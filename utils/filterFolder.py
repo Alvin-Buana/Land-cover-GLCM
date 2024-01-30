@@ -19,4 +19,10 @@ def filter_folder_by_ext(ext):
 
     logging.info(f"Detected {len(result_folders)} folders have {ext} extenstions")
     return result_folders
+
+def filter_folder_by_name(data,name):
+    logging.info(f"Filtering Folder based on {name} ...")
+    data = [dat  for dat in data if name in dat]
+    logging.info(f"Detected {len(data)} that contains {name}")
+    return data
     

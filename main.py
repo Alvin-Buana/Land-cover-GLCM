@@ -1,7 +1,9 @@
 from preprocessing.datasetHandler import sent2_handler
-from utils.glcm import extract_raster,glcm
-from model.svm import modelSVC
+from config.config import img_size
+from prepareModel.prepareAndTraining import sent2_data_prep
 
+import matplotlib.pyplot as plt
+from rasterio.plot import show
 import numpy as np
 import rasterio
 import logging 
@@ -27,8 +29,14 @@ if __name__ == '__main__':
     
     logging.info('Program starting...')
     sent2_handler()
-    tester = '.\data\hutan (Sent-2)\images\\000000000.tif'
-    tester = extract_raster(tester)
-    res=glcm(tester,1)
-    # print(contrast)
+    sent2_data_prep()
+    #For testing
+    # tester = '.\data\hutan (Sent-2)\images\\000000000.tif'
+    # tester = extract_raster(tester,img_size,3)
+    # res=perform_single_glcm(tester,1,0)
+    # print(res)
+    logging.info('DONE')
+    
+
+
     

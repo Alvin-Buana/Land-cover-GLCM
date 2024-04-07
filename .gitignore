@@ -3,3 +3,4 @@ logs
 __pycache__/
 *.bat
 .vscode
+model_saved_path

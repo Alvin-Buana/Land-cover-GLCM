@@ -9,9 +9,12 @@ img_size = 128
 glcm_method = 2 #[each pixels : 1, all pixels : 2]
 
 #glcm
-glcm_save_path = "data/glcm_features/"
+glcm_save_path = datadir+"/glcm_features/"
 distances = [1,2,3,4,5]
 angles = [0, np.pi/4, np.pi/2, 3*np.pi/4]
+
+#model 
+chosen_model = "Random Forest" #SVM or Random Forest
 
 #Save model (need to create folder first)
 model_saved_path = 'model_saved_path/'

@@ -1,0 +1,7 @@
+scikit-image
+pandas
+rasterio
+tqdm
+opencv-python 
+scikit-learn
+matplotlib
